@@ -1,0 +1,26 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.nav {
+    padding-top: 3.125rem;
+
+    @include MD-styles {
+        padding-top: 2.5rem;
+    }
+
+    @include SM-styles {
+        padding-top: 1.5rem;
+    }
+
+    .nav__inner {
+        @extend %wrap;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav__logo {
+    flex-shrink: 0;
+    width: 81px;
+}
