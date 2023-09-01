@@ -1,0 +1,28 @@
+@use './variables' as *;
+
+@mixin SM-styles {
+    @media (max-width:619px) {
+        @content;
+    }
+}
+
+@mixin MD-styles {
+    @media (max-width:1270px) {
+        @content;
+    }
+}
+
+%wrap {
+    padding-left: 10.438rem;
+    padding-right: 10.438rem;
+
+    @include MD-styles {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    @include SM-styles {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
